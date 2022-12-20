@@ -20,4 +20,6 @@ public class InstantiationExample {
     public Object instantiateANewObject(){
         return null;
     }
+
+    Object o = new Object();
 }
