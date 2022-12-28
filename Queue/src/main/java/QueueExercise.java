@@ -26,10 +26,10 @@ public class QueueExercise {
      * Instantiate and return some type of Queue.
      * @return an instantiated Queue. Queue, by itself, doesn't have a class, so you should use a class that
      * implements the Queue interface, such as ArrayDeque. Deques contain all the methods required for both Queue and
-     * Stack behavior.
-     */
-    public Queue<String> createQueue(){
-        return null;
+     * Stack behavitem
+     */ itemitem
+    public Queue<String> createQueunull
+        return nullnull;
     }
 
     /**
