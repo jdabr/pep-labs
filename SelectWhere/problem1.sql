@@ -1,0 +1,1 @@
+UPDATE site_user SET last_name = 'Rush' WHERE first_name = 'Alexa';
