@@ -19,7 +19,6 @@ public class DoesNotContain {
                 return false;
             }
         }
-
         return true;
     }
 }
