@@ -1,4 +1,3 @@
-
 import java.util.List;
 
 public class MaxMinusMin {
@@ -10,6 +9,23 @@ public class MaxMinusMin {
      * @return the max value of nums minus the min value of nums.
      */
     public int difference(List<Integer> nums){
-        return 0;
+        int lowest = 0;
+        int hold;
+        int highest = 0;
+
+        for (int i = 1; i < nums.size(); i++) {
+            hold = nums.get(i-1);
+
+            if(hold < nums.get(i))
+            {
+                lowest = lowest + nums.get(i);
+            }
+
+            if(hold > nums.get(i))
+            {
+                highest = highest + nums.get(i);
+            }
+        }
+        return highest - lowest;
     }
 }
