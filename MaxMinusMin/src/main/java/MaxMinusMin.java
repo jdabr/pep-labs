@@ -9,25 +9,19 @@ public class MaxMinusMin {
      * @return the max value of nums minus the min value of nums.
      */
     public int difference(List<Integer> nums){
-        int lowest = 0;
-        int hold;
-        int highest = 0;
-        int initial = nums.get(0);
+        int lowest = (int) nums.get(0);
+        int highest = (int) nums.get(0);
+        int getNext;
 
         for (int i = 0; i < nums.size(); i++) {
-            //hold = nums.get(i-1);
-
-            if(nums.get(i) < initial)
-            {
-                lowest = initial;
+            getNext = (int)nums.get(i);
+            
+            if(getNext < lowest) {
+                lowest = getNext;
             }
-        }
 
-        for (int i = 0; i < nums.size(); i++) {
-
-            if(nums.get(i) > initial)
-            {
-                highest = initial;
+            if(getNext > highest){
+                highest = getNext;
             }
         }
         return highest - lowest;
