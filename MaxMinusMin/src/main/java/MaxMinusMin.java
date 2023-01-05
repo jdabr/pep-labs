@@ -12,18 +12,22 @@ public class MaxMinusMin {
         int lowest = 0;
         int hold;
         int highest = 0;
+        int initial = nums.get(0);
 
-        for (int i = 1; i < nums.size(); i++) {
-            hold = nums.get(i-1);
+        for (int i = 0; i < nums.size(); i++) {
+            //hold = nums.get(i-1);
 
-            if(hold < nums.get(i))
+            if(nums.get(i) < initial)
             {
-                lowest = lowest + nums.get(i);
+                lowest = initial;
             }
+        }
 
-            if(hold > nums.get(i))
+        for (int i = 0; i < nums.size(); i++) {
+
+            if(nums.get(i) > initial)
             {
-                highest = highest + nums.get(i);
+                highest = initial;
             }
         }
         return highest - lowest;
