@@ -8,7 +8,7 @@ public class CustomExceptionThrower {
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      */
-    public void throwCustomException() throws Exception{
+    public void throwCustomException() throws CustomException{
         String[] arr = {"Dog", "Cat", "Fish", "Turtle"};
 
         for (int i = 0; i < 10; i++) {
