@@ -9,13 +9,15 @@ public class CustomExceptionThrower {
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
      */
     public void throwCustomException() throws CustomException{
-        String[] arr = {"Dog", "Cat", "Fish", "Turtle"};
+        int numerator = 5;
+        int denominator = 0;
 
-        for (int i = 0; i < 10; i++) {
-            if (i >= 4){
-                throw new CustomException();
-            }
+        if (denominator == 0){
+            throw new CustomException();
+        }
+
+        int divisionResult = numerator/denominator;
+
+        System.out.println(divisionResult);
         }
     }
-
-}
