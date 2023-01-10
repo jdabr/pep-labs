@@ -39,8 +39,7 @@ public class JavalinSingleton {
                ObjectMapper om = new ObjectMapper();
                Song song = om.readValue(jsonReq, Song.class);
                song.setArtistName("Beatles");
-               String returnJson = om.writeValueAsString(song);
-               ctx.result(returnJson);
+               ctx.result(om.writeValueAsString(song));
         });
 
 
