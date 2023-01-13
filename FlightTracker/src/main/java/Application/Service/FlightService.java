@@ -65,8 +65,8 @@ public class FlightService {
         {
             return null;
         }
-
-        return null; //flightDAO.updateFlight(flight_id, flight);
+        flightDAO.updateFlight(flight_id, flight);
+        return flight;
     }
 
     /**

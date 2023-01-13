@@ -156,7 +156,6 @@ public class FlightDAO {
             preparedStatement.setString(1, flight.getDeparture_city());
             preparedStatement.setString(2, flight.getArrival_city());
             preparedStatement.setInt(3, id);
-
             preparedStatement.executeUpdate();
         }catch(SQLException e){
             System.out.println(e.getMessage());
