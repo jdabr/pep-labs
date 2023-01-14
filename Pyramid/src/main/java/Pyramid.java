@@ -27,9 +27,6 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){
-        String newline = "";
-        String asterisk = "";
-        String result = "";
 
         for (int i = 0; i < n; i++) {
             System.out.println("\n");
