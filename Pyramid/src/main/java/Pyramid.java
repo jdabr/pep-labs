@@ -32,15 +32,12 @@ public class Pyramid {
         String result = "";
 
         for (int i = 0; i < n; i++) {
-            newline = "\n";
+            System.out.println("\n");
 
             for (int j = 0; j < i + 1; j++) {
-                asterisk = "*";
-
-                result = newline + asterisk;
+                System.out.print("*");
             }
         }
-
-        return result;
+        return returnPyramid(n);
     }
 }
