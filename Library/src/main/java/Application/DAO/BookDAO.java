@@ -2,6 +2,7 @@ package Application.DAO;
 
 import Application.Util.ConnectionUtil;
 import Application.Model.Book;
+import Application.Service.BookService;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -114,11 +115,11 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT * FROM books WHERE count(book) > 0";
+            String sql = "SELECT * FROM book WHERE ? > 0";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
-
+            preparedStatement.setInt(1, books.size());
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
                 Book book = new Book(rs.getInt("isbn"),
