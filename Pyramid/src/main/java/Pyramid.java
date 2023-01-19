@@ -26,15 +26,10 @@ public class Pyramid {
      * @param n the size of the pyramid.
      * @return a string representation of the pyramid.
      */
+
+
     public String returnPyramid(int n){
-
-        for (int i = 0; i < n; i++) {
-            System.out.println("\n");
-
-            for (int j = 0; j < i + 1; j++) {
-                System.out.print("*");
-            }
-        }
-        return returnPyramid(n);
+        
+        return null;
     }
 }
