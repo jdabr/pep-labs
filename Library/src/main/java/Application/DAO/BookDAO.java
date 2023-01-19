@@ -115,12 +115,12 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT * FROM book WHERE ? > 0";
+            String sql = "SELECT * FROM book WHERE book.copies_available > 0";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
-            preparedStatement.setInt(1, books.size());
             ResultSet rs = preparedStatement.executeQuery();
+
             while(rs.next()){
                 Book book = new Book(rs.getInt("isbn"),
                         rs.getInt("author_id"),
