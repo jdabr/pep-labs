@@ -6,9 +6,10 @@ public class ReturnWordCount {
      */
     public int count(String in){
         int counter = 0;
+        char[] ch = in.toCharArray();
         
         for (int i = 0; i < in.length(); i++) {
-            if(in.contains(" "))
+            if(ch[i] == ' ')
             {
                 counter++;
             }
