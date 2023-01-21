@@ -65,12 +65,11 @@ public class SampleClass {
             }
 
     //    implement a custom .toString(){} method here.
-            public String toString(SampleClass test)
+            public String toString()
             {
-                StringBuilder sbo = new StringBuilder();
-                sbo.append(test.a);
-                sbo.append(test.b);
-                return sbo.toString();
+                StringBuilder sbo = new StringBuilder(a);
+                sbo.toString();
+                return "".concat(a);
             }
     
 }
