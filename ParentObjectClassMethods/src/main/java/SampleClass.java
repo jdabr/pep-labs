@@ -65,9 +65,12 @@ public class SampleClass {
             }
 
     //    implement a custom .toString(){} method here.
-            public String toString()
+            public String toString(SampleClass test)
             {
-                return "";
+                StringBuilder sbo = new StringBuilder();
+                sbo.append(test.a);
+                sbo.append(test.b);
+                return sbo.toString();
             }
     
 }
