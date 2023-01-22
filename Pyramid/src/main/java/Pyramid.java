@@ -29,7 +29,13 @@ public class Pyramid {
 
 
     public String returnPyramid(int n){
-        
-        return null;
+        String hold = "";
+        for (int index = 0; index < n; index++) {
+            hold = hold + "\n";
+            for (int i = 0; i < index + 1; i++) {
+                hold = hold + "*";
+            }
+        }
+        return hold;
     }
 }
