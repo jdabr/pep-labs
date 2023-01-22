@@ -67,9 +67,8 @@ public class SampleClass {
     //    implement a custom .toString(){} method here.
             public String toString()
             {
-                StringBuilder sbo = new StringBuilder(a);
-                sbo.toString();
-                return "".concat(a);
+                String abCustom = "" + a + b;
+                return abCustom;
             }
     
 }
