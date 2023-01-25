@@ -17,8 +17,8 @@ public class Isogram {
      */
     public boolean isIsogram(String str){
         String[] strArr = new String[str.length()];
-        Set<String> hs = new HashSet<String>();
         strArr = str.split("");
+        Set<String> hs = new HashSet<String>();
 
         for (int i = 0; i < strArr.length; i++) {
             hs.add(strArr[i]);
