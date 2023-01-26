@@ -13,6 +13,13 @@ public class StringReverse {
      * @return the reverse of str.
      */
     public String reverse(String str){
-        return null;
+        String[] strArr = str.split("");
+        String empty = "";
+
+        for (int i = str.length(); i > 0; i--) {
+            empty = empty + strArr[i - 1];
+        }
+
+        return empty;
     }
 }
