@@ -34,6 +34,7 @@ public class InsertPosition {
                 index = i + 1;
             }
         }
+        
         return index;
     }
 }
