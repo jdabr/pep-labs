@@ -11,27 +11,27 @@ public class LargestSum {
      */
     public int bigSum(List<Integer> nums){
         int n = nums.size();
-        int largest = 0;
-        int secondLargest = 0;
+        int largest = nums.get(0);
+        int secondLargest = nums.get(0);
+        int counter = 0;
         int sum = 0;
-        int indexCounter = 0;
 
         for (int i = 1; i < n; i++) {
-            if(nums.get(i-1) < nums.get(i))
+            if(largest < nums.get(i))
             {
                 largest = nums.get(i);
-                indexCounter = i;
+                counter = i;
             }
         }
+        nums.remove(counter);
+        int n1 = nums.size();
 
-        for (int i = 1; i < n; i++) {
-            if(nums.get(i-1) < nums.get(i))
+        for (int i = 1; i < n1; i++) {
+            if(secondLargest < nums.get(i))
             {
                 secondLargest = nums.get(i);
             }
         }
-
-
         sum = largest + secondLargest;
         return sum;
     }
