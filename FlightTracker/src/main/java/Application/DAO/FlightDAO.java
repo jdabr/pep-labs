@@ -75,7 +75,9 @@ public class FlightDAO {
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
-                Flight flight = new Flight(rs.getInt("flight_id"), rs.getString("departure_city"),
+                Flight flight = new Flight(
+                        rs.getInt("flight_id"), 
+                        rs.getString("departure_city"),
                         rs.getString("arrival_city"));
                 return flight;
             }
